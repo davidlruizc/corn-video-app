@@ -1,4 +1,4 @@
-import { createStackNavigator } from 'react-navigation'
+import { createStackNavigator } from 'react-navigation-stack'
 import Loading from './sections/components/loading'
 
 const Main = createStackNavigator(

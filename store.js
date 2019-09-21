@@ -22,6 +22,7 @@ const persistConfig = {
   blacklist: ['selectedMovie']
 }
 
+// Component Persisted
 const persistedReducer = persistReducer(persistConfig, reducer)
 
 /**
@@ -29,8 +30,12 @@ const persistedReducer = persistReducer(persistConfig, reducer)
  * Middlewares recieves new functions that returns the new state to manipulate them
  */
 const navigationMiddleware = createReactNavigationReduxMiddleware(
+  /**
+   * navStateSelector - state from store
+   * name of the applications like and id
+   */
+  state => state.navigation,
   'root',
-  state => state.navigation
 )
 
 const store = createStore(
